@@ -10,7 +10,8 @@
 .vitrineProdutos002 .vP_002_lista{
     flex-direction: column;
     justify-content: flex-start;
-    background-color: var(--cne1);
+    background-color: #f4f4f4;
+    border: 1px solid #ccc
     width: 60%;
     padding: 2.5px;
     margin-top: 10px;
