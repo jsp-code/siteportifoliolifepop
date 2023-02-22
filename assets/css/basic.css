@@ -1,0 +1,143 @@
+/*
+    Código Css Principal
+*/
+/*fonte escolhida*/
+@font-face {
+    font-family: n1;
+    src: url(../fonts/Nunito/n1.ttf);
+ }
+ @font-face {
+    font-family: n2;
+    src: url(../fonts/Nunito/n2.ttf);
+ }
+ @font-face {
+    font-family: n3;
+    src: url(../fonts/Nunito/n3.ttf);
+ }
+ @font-face {
+    font-family: n4;
+    src: url(../fonts/Nunito/n4.ttf);
+ }
+/*variaveis importantes*/
+:root{
+/* color grupe */
+--cor1:#F0EA3F;
+--cor2:#ff3b5c;
+--cor3:#D99E2E;
+--cor4:#35D92E;
+--cor5:#35FCDC;
+--cne1:#ffffff;
+--cne2:#dddddd;
+--cne3:#888888;
+--cne4:#333333;
+--cne5:#000000;
+/*propets for scale elements*/
+--minSubContemnerWidth: 85vw;
+}
+/* resete css*/
+*{
+    font-family: n3;
+    color: var(--cne4);
+    position: relative;
+    box-sizing: border-box;
+    border-color: #333333;
+    text-align: center;
+}
+a{
+    text-decoration: none;
+}
+html{
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+body,div,section,aside,header,footer{
+    display: flex;
+    -ms-flex-align: center;
+    justify-content: center;
+    padding:0;
+    margin:0;
+    color:var(--cne4);
+    width: 100%;
+    font-family: n2;
+    font-size: 14pt;
+}
+input,button{
+    max-height: 45px;
+    align-self: center;
+    margin-top:auto;
+    margin-bottom: auto;
+    padding: 5px;
+    border: none;
+}
+.mimPadding{
+    width: 100%;
+    height: 15px;
+}
+.contVMax{
+    flex-direction: column;
+}
+.contHMax{
+    flex-direction: row;
+}
+.subContV{
+    flex-direction: column;
+    max-width: var(--minSubContemnerWidth);
+    margin-left: auto;
+    margin-right: auto;
+}
+.subContH{
+    flex-direction: row;
+    max-width: var(--minSubContemnerWidth);
+    margin-left: auto;
+    margin-right: auto;
+}
+@media  (max-width: 768px) {
+    .subContV{
+        flex-direction: column;
+    }
+    .subContH{
+        flex-direction: column;
+        flex-wrap: wrap;
+    }
+}
+body{
+    flex-direction: column;
+    background-color: var(--cor1);
+    /*width: 100vw;*/
+}
+header{
+    flex-direction: column;
+    background-color: var(--cor5);
+}
+h1{
+    align-items: flex-start;
+    margin-left: 20px;
+    margin-right: auto;
+    font-size: 18px;
+    font-family: n4;
+}
+img{
+    width: 100%;
+}
+ol,ul{
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+li{
+    list-style: none;
+    text-align: center;
+    text-transform: uppercase;
+    margin: 10px;
+    padding: 3px;
+}
+p{
+    text-align: justify;
+    -webkit-hyphens: auto;
+    -ms-hyphens: auto;
+    hyphens: auto;
+    word-break: break-word;
+    font-family: n2;
+}
+
