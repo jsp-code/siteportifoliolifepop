@@ -72,5 +72,15 @@
         width: 95%;
         height: 30vh;
     }
+    .vitrineProdutos002  .vP_002_produto {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        height: auto;
+    }
+    .vitrineProdutos002  .vP_002_produto div div{
+        width: auto;
+        margin: 0;
+    }
 
 }
