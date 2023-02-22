@@ -72,6 +72,9 @@ a.subli:hover{
     #mainMenu{
     background-color: var(--cor2);
     }
+    li a{
+     font-size:10pt;   
+    }
 }
 #mainMenu> li{
     margin: 0px;
