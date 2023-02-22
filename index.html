@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" 
+    content="
+        Esse é um site de EXEMPLO do portfólio de jsp-code (github).
+        Author:Julimar Simões de Paula."
+    >
+    <meta name="keywords" content="site-model, stores-site, exemple-site, portfolio,exemple">
+    
+    <title>LifePop (Portfólio Site de Ropa / jsp-code)</title>
+    <link rel="stylesheet" href="./assets/css/basic.css">
+    <link rel="stylesheet" href="./assets/css/main.css">
+    <link rel="stylesheet" href="./assets/css/vitrineProdutos001.css">
+    <link rel="shortcut icon" href="./assets/png/logo.png" type="image/x-icon">
+    <script>
+        alert("esse site é apenas um portfólio. Todas informações aqui presentes são fictícias.")
+        alert(
+            `role a pagina para ver a página principal.\n
+             click no carrinho para ver a página do carrilho de compras.\n
+             click em qualquer produto para ver a página de produto individual\n
+             click em pesquisar para explorar a página de lista de produtos.
+        `)
+    </script>
+</head>
+
+<body>
+    <header>
+        <div id="headLine" class="contHMax">
+            <div  class="subContH">
+                <h1 >
+                    LifePop: A roupa que você quer está aqui!
+                </h1>
+                <a href="./carinho.html" target="_self" rel="noopener noreferrer">
+                    <img src="./assets/svg/icones/carrinho_inativo.svg" 
+                        style="width:40px;
+                               margin-top: 5px;"
+                    alt="">
+                </a>
+                
+            </div>
+        </div>
+        <div class="subContH">
+            <img src="./assets/svg/logo.svg" id="logoImagem">
+            <ul  id ="mainMenu" >
+                <li><a href="">categorias</a>
+                    <ul>
+                        <li ><a class="subli" href="">camisas</a></li>
+                        <li><a class="subli" href="">camisetas</a></li>
+                        <li><a class="subli" href="">causados</a></li>
+                        <li><a class="subli" href="">vestido</a></li>
+                        <li><a class="subli" href="">calças</a></li>
+                        <li><a class="subli" href="">bermudas</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="">nossa história</a>
+                    <ul>
+                        <li ><a href="" class="subli">venha conhecer nosso acervo</a></li>
+                    </ul>
+                </li>
+                <li><a href="">se torne um parceiro</a></li>
+            </ul>
+        </div>
+        <div class="contHMax" id="pesquisaContemner">
+            <div style="flex-wrap: wrap;">
+                <div class="mimPadding"></div>
+                <button onclick="location.href='./produtoLista.html'" >
+                    pesquisa
+                </button>
+                <input type="text" placeholder="Encontre o que precisa aqui!">
+                <div class="mimPadding"></div>
+            </div>
+            
+        </div>
+        <div class="contHMax" id="navContemner">
+            <div class="subContH">
+                <nav >Site > Home</nav>
+            </div>
+        </div>
+    </header>
+
+
+
+    <!-- Inicio do baner rotativo do site ---------------     -->
+    <section id="banner" class="contHMax">
+        <div style="display:flex;flex-direction: row;width: 100%;height: 45vw;position: relative;">
+            <div id="interface" style="position: absolute;
+                                       display: flex;
+                                       flex-direction: row;
+                                       height: 100%;
+                                       width: 100%;
+                                       align-items: center;
+                                       justify-content: center;">
+                <button id="b_left"
+                        style="height: 15%;
+                               width: 15%;
+                               margin-left:0;
+                               margin-right:auto;
+                               font-size: 30px;
+                               background-color: transparent;
+                               background-image: url(./assets/svg/icones/left_but.svg);
+                               background-size: 100% 100%;
+                               background-repeat: no-repeat;
+                               border: none;
+                               ">
+                
+    
+                </button>
+                <a id="banerLink" href="./carinho.html" style="
+                    display: flex;
+                    position: relative;
+                    height: 100%;
+                    width: 80vw;               
+                ">
+
+                </a>
+                
+                <button id="b_right"
+                        style="height: 15%;
+                               width: 15%;
+                               margin-left:auto;
+                               margin-right:0;
+                               font-size: 30px;
+                               background-color: transparent;
+                               background-image: url(./assets/svg/icones/right_but.svg);
+                               background-size: 100% 100%;
+                               background-repeat: no-repeat;
+                               border: none;
+                               ">
+    
+                </button>
+            </div>
+            
+            <canvas id="teste"></canvas>
+        </div>
+    </section>
+
+
+
+    <section class="subContH" id="vantagensConteiner">
+        
+        <section id="vantagens">
+            <div class="vantagem">
+                <img src="./assets/svg/icones/presente.svg" alt="">
+                Produtos exclusivos e de <br>alta qualidade
+            </div>
+            <div class="vantagem">
+                <img src="./assets/svg/icones/entregas.svg" alt="">
+                Fretes grates para todo pais<br>
+            </div>
+            <div class="vantagem">
+                <img src="./assets/svg/icones/ambiental.svg" alt="">
+                Peças com selo verificado de <br> proteção ambiental
+            </div>
+        </section>
+    </section>
+    <section class="subContH">
+        <object data="./assets/svg/chamadaPgPrincipal.svg" 
+                type=""
+                style="width:100%
+        ;"></object>
+    </section>
+
+
+
+    <section class="subContH vitrineProdutos001">
+        <div class="vP001_trilha">
+
+
+
+            <section class="vP001_produto">
+                <div>
+                    <img 
+                        src="./assets/png/produtos/camisas/camisa_001.jpg" 
+                        alt="Imagem de uma camisa branca básica"
+                    >
+                </div>
+                <div style="display: flex;
+                            align-items: center;
+                            flex-direction: column;
+                            padding: 5px;">
+                    <h3>Camisa Básica Masculina</h3>
+                    <div>
+                        tamanhos: <span class="destaque">P</span> <span class="destaque">M</span> <span class="destaque">G</span>
+                    </div>
+                    <div>
+                        Preço: <span class="produto_valor">19.99</span> <span class="unidade_valor">R$</span>
+                    </div>
+                    <div>
+                        <span class="vP001_estrela" >★</span>
+                        <span class="vP001_estrela" >★</span>
+                        <span class="vP001_estrela" >★</span>
+                        <span class="vP001_estrela" >★</span>
+                        <span class="vP001_estrela_inativ" >★</span>
+                    </div>
+                </div>
+                <button type="button" onclick="location.href='./produtoArea.html'" >
+                    compre agora
+                </button>
+            </section>
+
+
+            <section class="vP001_produto">
+                <div>
+                    <img 
+                        src="./assets/png/produtos/camisas/camisa_002.jpg" 
+                        alt="Imagem de uma camisa branca básica"
+                    >
+                </div>
+                <div style="display: flex;
+                            align-items: center;
+                            flex-direction: column;
+                            padding: 5px;">
+                    <h3>Camisa Estamp. Masculina</h3>
+                    <div>
+                        tamanhos: <span class="destaque">P</span> <span class="destaque">M</span> <span class="destaque">G</span> <span class="destaque">XG</span>
+                    </div>
+                    <div>
+                        Preço: <span class="produto_valor">29.99</span> <span class="unidade_valor">R$</span>
+                    </div>
+                    <div>
+                        <span class="vP001_estrela" >★</span>
+                        <span class="vP001_estrela" >★</span>
+                        <span class="vP001_estrela" >★</span>
+                        <span class="vP001_estrela" >★</span>
+                        <span class="vP001_estrela_inativ" >★</span>
+                    </div>
+                </div>
+                <button type="button" onclick="location.href='./produtoArea.html'" >
+                    compre agora
+                </button>
+            </section>
+
+
+            <section class="vP001_produto">
+                <div>
+                    <img 
+                        src="./assets/png/produtos/camisas/camisa_003.jpg" 
+                        alt="Imagem de uma camisa branca básica"
+                    >
+                </div>
+                <div style="display: flex;
+                            align-items: center;
+                            flex-direction: column;
+                            padding: 5px;">
+                    <h3>Camisa ¾ Feminina</h3>
+                    <div>
+                        tamanhos: <span class="destaque">P</span> <span class="destaque">M</span> 
+                    </div>
+                    <div>
+                        Preço: <span class="produto_valor">44.99</span> <span class="unidade_valor">R$</span>
+                    </div>
+                    <div>
+                        <span class="vP001_estrela" >★</span>
+                        <span class="vP001_estrela" >★</span>
+                        <span class="vP001_estrela" >★</span>
+                        <span class="vP001_estrela" >★</span>
+                        <span class="vP001_estrela_inativ" >★</span>
+                    </div>
+                </div>
+                <button type="button" onclick="location.href='./produtoArea.html'" >
+                    compre agora
+                </button>
+            </section>
+
+            <section class="vP001_produto">
+                <div>
+                    <img 
+                        src="./assets/png/produtos/jaquetas/jaqueta_001.jpg" 
+                        alt="Imagem de uma camisa branca básica"
+                    >
+                </div>
+                <div style="display: flex;
+                            align-items: center;
+                            flex-direction: column;
+                            padding: 5px;">
+                    <h3>Jaqueta de Nihon unisex</h3>
+                    <div>
+                        tamanhos: <span class="destaque">P</span> <span class="destaque">M</span> <span class="destaque">G</span>
+                    </div>
+                    <div>
+                        Preço: <span class="produto_valor">89.99</span> <span class="unidade_valor">R$</span>
+                    </div>
+                    <div>
+                        <span class="vP001_estrela" >★</span>
+                        <span class="vP001_estrela" >★</span>
+                        <span class="vP001_estrela" >★</span>
+                        <span class="vP001_estrela" >★</span>
+                        <span class="vP001_estrela_inativ" >★</span>
+                    </div>
+                </div>
+                <button type="button" onclick="location.href='./produtoArea.html'" >
+                    compre agora
+                </button>
+            </section>
+
+            <section class="vP001_produto">
+                <div>
+                    <img 
+                        src="./assets/png/produtos/vestidos/vestido_001.jpg" 
+                        alt="Imagem de uma camisa branca básica"
+                    >
+                </div>
+                <div style="display: flex;
+                            align-items: center;
+                            flex-direction: column;
+                            padding: 5px;">
+                    <h3>Vestido Pantanal </h3>
+                    <div>
+                        tamanhos: <span class="destaque">unico</span>
+                    </div>
+                    <div>
+                        Preço: <span class="produto_valor">55.99</span> <span class="unidade_valor">R$</span>
+                    </div>
+                    <div>
+                        <span class="vP001_estrela" >★</span>
+                        <span class="vP001_estrela" >★</span>
+                        <span class="vP001_estrela" >★</span>
+                        <span class="vP001_estrela" >★</span>
+                        <span class="vP001_estrela_inativ" >★</span>
+                    </div>
+                </div>
+                <button type="button" onclick="location.href='./produtoArea.html'" >
+                    compre agora
+                </button>
+            </section>
+        </div>
+    </section>
+
+
+
+    <section id="main" class="subContV">     
+        <section>
+            <p>
+                Todos os produtos da loja foram comprados com os melhores fornecedores do Brasil e do mundo com o objetivo de garantir que você tenha a melhor experiencia acessível no pais.
+                Buscaremos então esse objetivo: a sua satisfação. Queremos que você, caro cliente, seja nosso maior colaborador. Faremos o possível para que a sua opinião transpareça o trabalho duro que desempenharemos aqui. Você, nosso querido cliente, e nosso maior objetivo. Mas até que o gratificante salario que recebemos, conseguir lhe oferecer produtos que sejam uteis para você e para a sociedade nos faz realizados como empresa e como grupo.
+            </p>
+        </section>
+    </section>
+
+    <footer class="contVMax">
+        <section class="subContH">
+            <ul id="footerUl">
+                <h2>Links</h2>
+                <li><a href="">Produtos</a></li>
+                <li><a href="">Promoções da semana</a></li>
+                <li><a href="">Se torne um parceiro</a></li>
+                <li><a href="">Atendimento ao cliente</a></li>
+            </ul>
+            <div id="linhaDivisoria"></div>
+            <img src="./assets/svg/logo.svg">
+        </section>
+        <section id="infoOrigem">
+            by Julimar Simões de Paula - Viçosa - 2023
+        </section>
+    </footer>
+    <script src="./assets/js/obj_banner.js"></script>
+    <script src="./assets/js/banner.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LifePop</title>
+    <link rel="stylesheet" href="./assets/css/basic.css">
+    <link rel="stylesheet" href="./assets/css/main.css">
+    <link rel="stylesheet" href="./assets/css/vitrineProdutos001.css">
+    <link rel="stylesheet" href="./assets/css/produtoInfo.css">
+    <link rel="shortcut icon" href="./assets/png/logo.png" type="image/x-icon">
+</head>
+
+<body>
+    <header>
+        <div id="headLine" class="contHMax">
+            <div  class="subContH">
+                <h1 >
+                    LifePop: A roupa que você quer está aqui!
+                </h1>
+                <a href="./carinho.html" target="_self" rel="noopener noreferrer">
+                    <img src="./assets/svg/icones/carrinho_inativo.svg" 
+                        style="width:40px;
+                               margin-top: 5px;"
+                    alt="">
+                </a>
+                
+            </div>
+        </div>
+        <div class="subContH">
+            <img src="./assets/svg/logo.svg" id="logoImagem">
+            <ul  id ="mainMenu" >
+                <li><a href="">categorias</a>
+                    <ul>
+                        <li ><a class="subli" href="">camisas</a></li>
+                        <li><a class="subli" href="">camisetas</a></li>
+                        <li><a class="subli" href="">causados</a></li>
+                        <li><a class="subli" href="">vestido</a></li>
+                        <li><a class="subli" href="">calças</a></li>
+                        <li><a class="subli" href="">bermudas</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="">nossa história</a>
+                    <ul>
+                        <li ><a href="" class="subli">venha conhecer nosso acervo</a></li>
+                    </ul>
+                </li>
+                <li><a href="">se torne um parceiro</a></li>
+            </ul>
+        </div>
+        <div class="contHMax" id="pesquisaContemner">
+            <div style="flex-wrap: wrap;">
+                <div class="mimPadding"></div>
+                <button>pesquisa</button><input type="text" placeholder="Encontre o que precisa aqui!">
+                <div class="mimPadding"></div>
+            </div>
+            
+        </div>
+        <div class="contHMax" id="navContemner">
+            <div class="subContH">
+                <nav >Site > Home</nav>
+            </div>
+        </div>
+    </header>
+    <div id="aviso"
+    style="
+        display: none;
+        flex-direction: column;
+        position: fixed;
+        z-index: 2001;
+        width: 100vw;
+        height: 100vh;
+        overflow: hidden;
+        background-color: #ff3b5c55;
+        top: 0;
+
+    ">
+        <div style="display:flex;
+                    flex-direction: column;
+                    align-self: center;
+                    justify-self: center;
+                    background-color: #ff3b5c;
+                    width: 60%;
+                    height: 10%;
+                    border-radius: 50px;
+                    font-weight: 400;
+                    color: #fff;
+        ">
+            Produto Adicionado com sucesso
+        </div>
+    </div>
+    <section class="subContV produtoInfo" >
+        <h2 class="subContH" style="
+            width: 100%; 
+            background-color: #eee;
+            margin-top: 0;
+            margin-bottom: 10px;
+            ">
+            Camisa Básica
+        </h2>
+        <div class="subContH">
+            <section id="produtoInfoZoon">
+                <img src="./assets/png/produtos/camisas/camisa_001.jpg" alt="">
+            </section>
+            <section class="pIsubCont">
+                <div class="pI_discr"> 
+                    Camisa de malha importada. 80% algodão, 20% poliéster.
+                    Produto novo e de ótima qualidade
+                </div>
+                <form action="" class="pI_form">
+                    <div>tamanho 
+                        <select name="" id="">
+                            <option value="">PP</option>
+                            <option value="">P</option>
+                            <option value="">M</option>
+                            <option value="">G</option>
+                            <option value="">XG</option>
+                            <option value="">XXG</option>
+                        </select>
+                    </div>
+                    <div>cor 
+                        <select name="" id="">
+                            <option value="">Branca</option>
+                            <option value="">cinza</option>
+                            <option value="">verde</option>
+                            <option value="">vermelha</option>
+                            <option value="">Preta</option>
+                        </select>
+                    </div>
+                    <div>quantidades
+                        <input type="number" value="2" min="0" >
+                    </div>
+                    <div style="align-items: center;justify-content: center;">
+                        <span style="font-size: 20pt;" >preço unitário</span> 
+                        <input type="text" value="R$ 19,90" disabled=""
+                        style="background-color: transparent;
+                        font-size: 20pt;">
+                    </div>
+                    <button type="button" id="btn_compra">adicionar ao carrinho</button>
+                </form>
+            </section>
+        </div>
+        <hr style="width: 95%; align-self: center;margin-top: 30px; border: 3px solid#9c9c9c;">
+        <script>
+            const zoon = document.querySelector("#produtoInfoZoon");
+            const zoonImg = document.querySelector("#produtoInfoZoon img");
+    
+            zoon.onmousemove = function(event){
+                cx = event.clientX -zoon.offsetLeft
+                cy = event.clientY -zoon.offsetTop
+                w = zoon.offsetWidth
+                h = zoon.offsetHeight
+    
+                cx = (cx/w)*70
+                cy = (cy/h)*83
+    
+                zoonImg.style.transform = `translate(-${cx}%,-${cy}%) scale(2)`
+            }
+            zoon.onmouseleave = function(){
+                w = zoon.offsetWidth
+                h = zoon.offsetHeight
+                zoonImg.style.transform = `translate(-${50}%,-${50}%) scale(1)`
+            }
+        </script>
+        <script>
+            /*controlando aviso de compra*/
+            const btn_compra = document.querySelector("#btn_compra")
+            const aviso = document.querySelector("#aviso")
+            btn_compra.onclick = function(){
+                aviso.style.display = "flex"
+                var cont = 0
+                function atualizar(){
+                    var mostrar =50
+                    var finalizar = 100
+                    if (cont<mostrar) {
+                        aviso.style.opacity ="1"
+                        cont +=1
+                        requestAnimationFrame(atualizar)
+                    }else if (cont<finalizar) {
+                        var valor = ((finalizar -cont)/(finalizar-mostrar)).toFixed(2)
+                        aviso.style.opacity =`${valor}`
+                        cont +=1
+                        requestAnimationFrame(atualizar)
+                    } else{
+                        aviso.style.display = "none"  
+                        aviso.style.opacity ="1.0"
+                        cont =0
+                    }
+
+                }
+                requestAnimationFrame(atualizar)
+
+            }
+        </script>
+    </section>
+
+   
+   
+
+
+    <section class="subContH vitrineProdutos001">
+        <div class="vP001_trilha">
+
+
+
+            <section class="vP001_produto">
+                <div>
+                    <img 
+                        src="./assets/png/produtos/camisas/camisa_001.jpg" 
+                        alt="Imagem de uma camisa branca básica"
+                    >
+                </div>
+                <div style="display: flex;
+                            align-items: center;
+                            flex-direction: column;
+                            padding: 5px;">
+                    <h3>Camisa Básica Masculina</h3>
+                    <div>
+                        tamanhos: <span class="destaque">P</span> <span class="destaque">M</span> <span class="destaque">G</span>
+                    </div>
+                    <div>
+                        Preço: <span class="produto_valor">19.99</span> <span class="unidade_valor">R$</span>
+                    </div>
+                    <div>
+                        <span class="vP001_estrela" >★</span>
+                        <span class="vP001_estrela" >★</span>
+                        <span class="vP001_estrela" >★</span>
+                        <span class="vP001_estrela" >★</span>
+                        <span class="vP001_estrela_inativ" >★</span>
+                    </div>
+                </div>
+                <button type="submit">compre agora</button>
+            </section>
+
+
+            <section class="vP001_produto">
+                <div>
+                    <img 
+                        src="./assets/png/produtos/camisas/camisa_002.jpg" 
+                        alt="Imagem de uma camisa branca básica"
+                    >
+                </div>
+                <div style="display: flex;
+                            align-items: center;
+                            flex-direction: column;
+                            padding: 5px;">
+                    <h3>Camisa Estamp. Masculina</h3>
+                    <div>
+                        tamanhos: <span class="destaque">P</span> <span class="destaque">M</span> <span class="destaque">G</span> <span class="destaque">XG</span>
+                    </div>
+                    <div>
+                        Preço: <span class="produto_valor">29.99</span> <span class="unidade_valor">R$</span>
+                    </div>
+                    <div>
+                        <span class="vP001_estrela" >★</span>
+                        <span class="vP001_estrela" >★</span>
+                        <span class="vP001_estrela" >★</span>
+                        <span class="vP001_estrela" >★</span>
+                        <span class="vP001_estrela_inativ" >★</span>
+                    </div>
+                </div>
+                <button type="submit">compre agora</button>
+            </section>
+
+
+            <section class="vP001_produto">
+                <div>
+                    <img 
+                        src="./assets/png/produtos/camisas/camisa_003.jpg" 
+                        alt="Imagem de uma camisa branca básica"
+                    >
+                </div>
+                <div style="display: flex;
+                            align-items: center;
+                            flex-direction: column;
+                            padding: 5px;">
+                    <h3>Camisa ¾ Feminina</h3>
+                    <div>
+                        tamanhos: <span class="destaque">P</span> <span class="destaque">M</span> 
+                    </div>
+                    <div>
+                        Preço: <span class="produto_valor">44.99</span> <span class="unidade_valor">R$</span>
+                    </div>
+                    <div>
+                        <span class="vP001_estrela" >★</span>
+                        <span class="vP001_estrela" >★</span>
+                        <span class="vP001_estrela" >★</span>
+                        <span class="vP001_estrela" >★</span>
+                        <span class="vP001_estrela_inativ" >★</span>
+                    </div>
+                </div>
+                <button type="submit">compre agora</button>
+            </section>
+
+            <section class="vP001_produto">
+                <div>
+                    <img 
+                        src="./assets/png/produtos/jaquetas/jaqueta_001.jpg" 
+                        alt="Imagem de uma camisa branca básica"
+                    >
+                </div>
+                <div style="display: flex;
+                            align-items: center;
+                            flex-direction: column;
+                            padding: 5px;">
+                    <h3>Jaqueta de Nihon unisex</h3>
+                    <div>
+                        tamanhos: <span class="destaque">P</span> <span class="destaque">M</span> <span class="destaque">G</span>
+                    </div>
+                    <div>
+                        Preço: <span class="produto_valor">89.99</span> <span class="unidade_valor">R$</span>
+                    </div>
+                    <div>
+                        <span class="vP001_estrela" >★</span>
+                        <span class="vP001_estrela" >★</span>
+                        <span class="vP001_estrela" >★</span>
+                        <span class="vP001_estrela" >★</span>
+                        <span class="vP001_estrela_inativ" >★</span>
+                    </div>
+                </div>
+                <button type="submit">compre agora</button>
+            </section>
+
+            <section class="vP001_produto">
+                <div>
+                    <img 
+                        src="./assets/png/produtos/vestidos/vestido_001.jpg" 
+                        alt="Imagem de uma camisa branca básica"
+                    >
+                </div>
+                <div style="display: flex;
+                            align-items: center;
+                            flex-direction: column;
+                            padding: 5px;">
+                    <h3>Vestido Pantanal </h3>
+                    <div>
+                        tamanhos: <span class="destaque">unico</span>
+                    </div>
+                    <div>
+                        Preço: <span class="produto_valor">55.99</span> <span class="unidade_valor">R$</span>
+                    </div>
+                    <div>
+                        <span class="vP001_estrela" >★</span>
+                        <span class="vP001_estrela" >★</span>
+                        <span class="vP001_estrela" >★</span>
+                        <span class="vP001_estrela" >★</span>
+                        <span class="vP001_estrela_inativ" >★</span>
+                    </div>
+                </div>
+                <button type="submit">compre agora</button>
+            </section>
+        </div>
+    </section>
+
+
+
+    <section id="main" class="subContV">     
+        <section>
+            <p>
+                Todos os produtos da loja foram comprados com os melhores fornecedores do Brasil e do mundo com o objetivo de garantir que você tenha a melhor experiencia acessível no pais.
+                Buscaremos então esse objetivo: a sua satisfação. Queremos que você, caro cliente, seja nosso maior colaborador. Faremos o possível para que a sua opinião transpareça o trabalho duro que desempenharemos aqui. Você, nosso querido cliente, e nosso maior objetivo. Mas até que o gratificante salario que recebemos, conseguir lhe oferecer produtos que sejam uteis para você e para a sociedade nos faz realizados como empresa e como grupo.
+            </p>
+        </section>
+    </section>
+
+    <footer class="contVMax">
+        <section class="subContH">
+            <ul id="footerUl">
+                <h2>Links</h2>
+                <li><a href="">Produtos</a></li>
+                <li><a href="">Promoções da semana</a></li>
+                <li><a href="">Se torne um parceiro</a></li>
+                <li><a href="">Atendimento ao cliente</a></li>
+            </ul>
+            <div id="linhaDivisoria"></div>
+            <img src="./assets/svg/logo.svg">
+        </section>
+        <section id="infoOrigem">
+            by Julimar Simões de Paula - Viçosa - 2023
+        </section>
+    </footer>
+
+</body>
+
+</html>
